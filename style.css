@@ -1,0 +1,147 @@
+
+/* Default styles for larger screens (desktop) */
+body {
+    font-family: 'Orbitron', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://t3.ftcdn.net/jpg/06/15/60/22/360_F_615602217_j2Qsk4subVemGJn1DIJxSW6j8n6LDeUG.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'TT Geekette', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #c59a61;
+    text-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(13, 14, 13, 0.4);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.stopwatch {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.time-section {
+    width: 120px; /* Adjust width as needed */
+    height: 120px; /* Adjust height as needed */
+    background: #000; /* Black background */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff; /* White text for contrast */
+    border: 5px solid transparent; /* Transparent border by default */
+    position: relative;
+}
+
+.time-section:nth-child(1) {
+    border-color: #ff6b6b; /* Red border for hours */
+}
+
+.time-section:nth-child(2) {
+    border-color: #ffb84d; /* Orange border for minutes */
+}
+
+.time-section:nth-child(3) {
+    border-color: #4db8ff; /* Blue border for seconds */
+}
+
+.time {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 3px solid #000; /* Black border */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-start {
+    background: linear-gradient(45deg, #ff6b6b, #ff4d4d); /* Bright gradient for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-stop {
+    background: linear-gradient(45deg, #ffb84d, #ff9e0d); /* Bright gradient for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-reset {
+    background: linear-gradient(45deg, #4db8ff, #1e90ff); /* Bright gradient for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile view styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .stopwatch {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time-section {
+        width: 100px; /* Adjust size for mobile */
+        height: 100px; /* Adjust size for mobile */
+    }
+
+    .time {
+        font-size: 2rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
